@@ -7,8 +7,8 @@ Here is an organized structure for your ROS 2 commands, categorized by workflow 
 creates the directory for your workspace.
 
 ```bash
-mkdir -p ~/ros2_ws/src
-cd ~/ros2_ws/src
+mkdir ros2_ws/src
+cd ros2_ws/src
 ```
 
 ### Package Creation
