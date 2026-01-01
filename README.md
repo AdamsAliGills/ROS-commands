@@ -27,7 +27,7 @@ I personally use a custom bash command (rosbuild) to source my complie commands 
 
 ```bash
 colcon build
-# Build only a specific package (optional, saves time)
+# or for just the package
 colcon build --packages-select bot_examples_py
 
 ```
@@ -37,10 +37,7 @@ colcon build --packages-select bot_examples_py
 After building, you must source the setup file to use the new packages.
 
 ```bash
-# Source the overlay
 source install/setup.bash
-
-# Verify the package exists
 ros2 pkg list | grep bot_examples_py
 
 ```
