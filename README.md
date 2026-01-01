@@ -41,3 +41,13 @@ After building, you must source the setup file to use the new packages.
 ros2 pkg list | grep bot_examples_py
 
 ```
+
+### To automatically source your specific workspace (e.g., Armbot), add this logic to your container's `.bashrc`.
+
+this is done out of convenience if you keep working on the same package all the time
+
+```bash
+if [ -f "$HOME/armbot/install/setup.bash" ]; then
+    source "$HOME/armbot/install/setup.bash"
+fi
+```
