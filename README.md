@@ -8,12 +8,12 @@ creates the directory for your workspace.
 
 ```bash
 mkdir -p ~/ros2_ws/src
-cd ~/ros2_ws
+cd ~/ros2_ws/src
 ```
 
 ### Package Creation
 
-You can create Python or C++ packages.
+You can create Python or C++ packages in src.
 
 ```bash
 ros2 pkg create --build-type ament_python bot_examples_py
@@ -37,7 +37,7 @@ colcon build --packages-select bot_examples_py
 After building, you must source the setup file to use the new packages.
 
 ```bash
-source install/setup.bash
+. install/setup.bash
 ros2 pkg list | grep bot_examples_py
 
 ```
