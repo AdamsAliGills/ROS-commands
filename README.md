@@ -32,6 +32,12 @@ colcon build --packages-select bot_examples_py
 
 ```
 
+if u did soucre wrongly and you are 100% sure
+```bash
+rm -rf build install log
+```
+
+
 ### Sourcing and Verification
 
 After building, you must source the setup file to use the new packages.
@@ -44,9 +50,10 @@ ros2 pkg list | grep bot_examples_py
 
 ### To automatically source your specific workspace (e.g., Armbot), add this logic to your container's `.bashrc`.
 
-this is done out of convenience if you keep working on the same package all the time
+this is done out of convenience if you keep working on the same package all the time. source ros itself aswell
 
 ```bash
+source /opt/ros/jazzy/setup.bash # ros source
 if [ -f "$HOME/armbot/install/setup.bash" ]; then
     source "$HOME/armbot/install/setup.bash"
 fi
